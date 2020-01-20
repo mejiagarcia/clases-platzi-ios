@@ -1,0 +1,6 @@
+framework module Pods_Aprendiendo {
+  umbrella header "Pods-Aprendiendo-umbrella.h"
+
+  export *
+  module * { export * }
+}

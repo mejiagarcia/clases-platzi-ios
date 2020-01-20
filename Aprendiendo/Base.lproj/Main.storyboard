@@ -22,7 +22,7 @@
                                 </constraints>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Udl-Sf-bdL">
-                                <rect key="frame" x="50" y="264" width="220" height="135"/>
+                                <rect key="frame" x="50" y="264" width="220" height="171"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YJD-Ia-o3D">
                                         <rect key="frame" x="0.0" y="0.0" width="220" height="34"/>
@@ -34,8 +34,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="chG-zC-3Wn">
+                                        <rect key="frame" x="0.0" y="78" width="220" height="31"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recordar correo?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObF-QZ-Z9T">
+                                                <rect key="frame" x="0.0" y="0.0" width="171" height="31"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Vbf-OX-iCT">
+                                                <rect key="frame" x="171" y="0.0" width="51" height="31"/>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sc6-qW-FwA">
-                                        <rect key="frame" x="0.0" y="78" width="220" height="57"/>
+                                        <rect key="frame" x="0.0" y="114" width="220" height="57"/>
                                         <color key="backgroundColor" white="1" alpha="0.20229973591549297" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="57" id="xNs-wW-15t"/>
@@ -91,6 +105,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Inicio" id="1be-5d-9Es"/>
                     <connections>
+                        <outlet property="emailSwitch" destination="Vbf-OX-iCT" id="VIP-Lq-rDq"/>
                         <outlet property="emailTextField" destination="YJD-Ia-o3D" id="6wp-mn-cwn"/>
                         <outlet property="passwordTextField" destination="CrH-vM-f0y" id="78V-Zw-eOD"/>
                         <segue destination="XFm-s7-bDk" kind="presentation" identifier="home_segue" modalPresentationStyle="fullScreen" id="YUZ-QW-QHG"/>
